@@ -1,0 +1,11 @@
+/* Chart x-axis */
+.d3-xaxis-group path, .d3-xaxis-group line {
+  fill: none;
+  stroke: #8b8b8b;
+  stroke-width: .5px;
+}
+.d3-xaxis-group text {
+  font-size: 14px;
+  fill: #8b8b8b;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxrQkFBa0I7QUFDbEI7RUFDRSxXQUFXO0VBQ1gsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtDQUNwQjtBQUNEO0VBQ0UsZ0JBQWdCO0VBQ2hCLGNBQWM7Q0FDZiIsImZpbGUiOiJidW5kbGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogQ2hhcnQgeC1heGlzICovXG4uZDMteGF4aXMtZ3JvdXAgcGF0aCwgLmQzLXhheGlzLWdyb3VwIGxpbmUge1xuICBmaWxsOiBub25lO1xuICBzdHJva2U6ICM4YjhiOGI7XG4gIHN0cm9rZS13aWR0aDogLjVweDtcbn1cbi5kMy14YXhpcy1ncm91cCB0ZXh0IHtcbiAgZm9udC1zaXplOiAxNHB4O1xuICBmaWxsOiAjOGI4YjhiO1xufSJdfQ== */

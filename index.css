@@ -1,0 +1,10 @@
+/* Chart x-axis */
+.d3-xaxis-group path, .d3-xaxis-group line {
+  fill: none;
+  stroke: #8b8b8b;
+  stroke-width: .5px;
+}
+.d3-xaxis-group text {
+  font-size: 14px;
+  fill: #8b8b8b;
+}
