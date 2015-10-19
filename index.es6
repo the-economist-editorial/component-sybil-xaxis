@@ -1,7 +1,7 @@
-import D3 from 'd3';
+import Dthree from 'd3';
 import React from 'react';
 
-export default class D3xAxis extends React.Component {
+export default class DthreeXaxis extends React.Component {
 
   // PROP TYPES
   static get propTypes() {
@@ -15,7 +15,7 @@ export default class D3xAxis extends React.Component {
   // DEFAULT PROPS
   static get defaultProps() {
     return {
-      axis: D3.svg.axis(),
+      axis: Dthree.svg.axis(),
     };
   }
 
@@ -29,19 +29,19 @@ export default class D3xAxis extends React.Component {
 
   // COMPONENT DID MOUNT
   componentDidMount() {
-    this.setXAxisConfig();
-    this.updateXAxis();
+    this.setXaxisConfig();
+    this.updateXaxis();
   }
 
   // COMPONENT DID UPDATE
   componentDidUpdate() {
-    this.setXAxisConfig();
-    this.updateXAxis();
+    this.setXaxisConfig();
+    this.updateXaxis();
   }
 
   // GET X-AXIS CONFIG
   //
-  setXAxisConfig() {
+  setXaxisConfig() {
     const config = this.props.config;
     const xScale = config.scale;
     const orient = config.orient;
@@ -58,20 +58,22 @@ export default class D3xAxis extends React.Component {
     if (this.props.config.orient === 'bottom') {
       height = this.props.config.bounds.height;
     }
-    return 'translate(0,' + height + ')';
+    return `translate(0,${height})`;
   }
 
   // UPDATE X-AXIS
   // Called directly on the DOM to update the axis
-  updateXAxis() {
-    const axisG = D3.select('.d3-xaxis-group');
+  updateXaxis() {
+    const axisGroup = Dthree.select('.d3-xaxis-group');
     const duration = this.props.config.duration;
     const transform = this.getAxisGroupTransformString();
     // I'm trying to chain the transitions if the axis moves
     // from bottom to top, as well as changing scale. This
     // is only partly successful, because I also need to address
     // the orientation (top/bottom), which flips the ticks and strings...
-    axisG
+    axisGroup
+      //
+      //
       .transition().duration(duration)
       .call(this.props.axis)
         // I did have delay(duration)...
@@ -80,7 +82,7 @@ export default class D3xAxis extends React.Component {
         ;
     // Failed attempt at separating re-orientation from move...
     // this.props.axis.orient(this.props.config.orient);
-    // axisG
+    // axisGroup
     //  .transition().delay(duration*3).duration(duration)
     //     .call(this.props.axis)
         // ;
@@ -90,7 +92,7 @@ export default class D3xAxis extends React.Component {
   render() {
     // Axis group
     return (
-      <g className="d3-xaxis-group" ref="axisGroup"/>
+      <g className="d3-xaxis-group" ref="axisGrouproup"/>
     );
   }
 }
